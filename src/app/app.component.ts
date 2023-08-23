@@ -19,10 +19,13 @@ export class AppComponent {
 
   initApp() {
 
+    // Esperamos a que el dispositivo este listo
     this.platform.ready().then(async () => {
 
+      // Obtengo el idioma del dispositivo
       const language = await Device.getLanguageCode();
 
+      // Cambio el idioma
       if (language.value) {
         this.translateService.use(language.value);
       }

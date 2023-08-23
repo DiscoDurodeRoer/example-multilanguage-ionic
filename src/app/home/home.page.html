@@ -1,11 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
+      <!-- Traduccion -->
       {{'hello.world' | translate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  <!-- Botones para cambiar de idioma -->
+  <ion-button (click)="changeSpanish()">Spanish</ion-button>
+  <ion-button (click)="changeEnglish()">English</ion-button>
 </ion-content>

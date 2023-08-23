@@ -10,14 +10,19 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Función para obtener los ficheros de la carpeta i18n
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json')
 }
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
     HttpClientModule,
+    // Modulo de @ngx-translate
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

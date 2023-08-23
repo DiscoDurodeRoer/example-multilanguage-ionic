@@ -12,12 +12,12 @@ export class HomePage {
     private translate: TranslateService
   ) { }
 
-  // changeSpanish() {
-  //   this.translate.use('es');
-  // }
+  changeSpanish() {
+    this.translate.use('es');
+  }
 
-  // changeEnglish() {
-  //   this.translate.use('en');
-  // }
+  changeEnglish() {
+    this.translate.use('en');
+  }
 
 }

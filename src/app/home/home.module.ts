@@ -17,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     IonicModule,
     HomePageRoutingModule,
     HttpClientModule,
+    // Necesario para el cambio dinamico de idioma
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
